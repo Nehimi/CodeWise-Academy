@@ -349,3 +349,27 @@ section{
    flex-wrap: wrap;
    gap:1.5rem;
 }
+
+/* footer styles */
+.site-footer{
+   position: fixed;
+   left: 30rem;
+   right: 0;
+   bottom: 0;
+   background-color: var(--white);
+   border-top: var(--border);
+   text-align: center;
+   padding: 1.2rem 2rem;
+   z-index: 1100;
+}
+.site-footer .footer-text{
+   color: var(--light-color);
+   font-size: 1.4rem;
+}
+
+/* adjust when sidebar is collapsed on small screens */
+body.active .site-footer{ left: 0; }
+
+@media (max-width:991px){
+  .site-footer{ left: 0; }
+}

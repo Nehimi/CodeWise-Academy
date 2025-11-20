@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#8e44ad;
-   --red:#e74c3c;
-   --orange:#f39c12;
-   --light-color:#888;
-   --light-bg:#eee;
-   --black:#2c3e50;
-   --white:#fff;
-   --border:.1rem solid rgba(0,0,0,.2);
-}*{
+   /* Dark theme colors (teal/cyan accent) */
+   --main-color: #18c6d6; /* primary accent */
+   --red: #ff6b6b;
+   --orange: #ffb86b;
+   --light-color: #98a6b3; /* secondary text */
+   --light-bg: #0b0f14; /* page background */
+   --black: #e8f0f6; /* main text (light) */
+   --white: #0f1720; /* card / surface background */
+   --border: .1rem solid rgba(255,255,255,.06);
+}
+*{
    font-family: 'Nunito', sans-serif;
    margin:0; padding:0;
    box-sizing: border-box;
@@ -37,6 +39,7 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background-color: var(--light-bg);
+   color: var(--black);
    padding-left: 30rem;
 }
 body.dark{
@@ -112,7 +115,7 @@ section{
 .header{
    position: sticky;
    top:0; left:0; right: 0;
-   background-color: var(--white);
+   background-color: black;
    z-index: 1000;
    border-bottom: var(--border);
 }
@@ -130,16 +133,16 @@ section{
 }
 .header .flex .search-form{
    width: 50rem;
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   padding:1.5rem 2rem;
+   border-radius: .6rem;
+   background-color: rgba(255,255,255,0.03);
+   padding:1.2rem 1.6rem;
    display: flex;
-   gap:2rem;
+   gap:1.6rem;
 
 }
 .header .flex .search-form input{
    width: 100%;
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    color:var(--black);
    background:none;
 }
@@ -155,14 +158,14 @@ section{
 .header .flex .icons div{
    font-size: 2rem;
    color:var(--black);
-   background-color: var(--light-bg);
-   border-radius: .5rem;
-   height: 4.5rem;
-   width: 4.5rem;
-   line-height: 4.5rem;
+   background-color: rgba(255,255,255,0.03);
+   border-radius: .6rem;
+   height: 4.2rem;
+   width: 4.2rem;
+   line-height: 4.2rem;
    cursor: pointer;
    text-align: center;
-   margin-left: .7rem;
+   margin-left: .6rem;
 }
 .header .flex .icons div:hover{
    background-color: var(--black);
@@ -208,7 +211,7 @@ section{
    position: fixed;
    top: 0; left: 0;
    width: 30rem;
-   background-color: var(--white);
+   background-color: #0b1216; /* slightly different from card bg */
    height: 100vh;
    border-right: var(--border);
    z-index: 1200;
@@ -240,27 +243,29 @@ section{
    text-align: center;
 }
 .side-bar .profile .image{
-   height: 10rem;
-   width: 10rem;
+   height: 9.2rem;
+   width: 9.2rem;
    border-radius: 50%;
-   object-fit: contain;
+   object-fit: cover;
    margin-bottom: 1rem;
+   border: .4rem solid rgba(24,198,214,.12);
 }
 .side-bar .profile .name{
-   font-size: 2rem;
+   font-size: 1.9rem;
    color:var(--black);
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
 }
 .side-bar .profile .role{
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    color: var(--light-color);
 }
 .side-bar .navbar a{
    display: block;
-   padding: 2rem;
-   font-size: 2rem;
+   padding: 1.6rem 1.8rem;
+   font-size: 1.8rem;
+   color: var(--black);
 }
 .side-bar .navbar a span{
    color:var(--light-color);
@@ -294,12 +299,13 @@ section{
    align-items: flex-start;
 }
 .home-grid .box-container .box{
-   background-color: var(--white);
-   border-radius: .5rem;
-   padding:2rem;
+   background-color: #0e1720; /* card surface */
+   border-radius: .6rem;
+   padding:1.8rem;
+   box-shadow: 0 6px 18px rgba(2,6,12,0.6);
 }
 .home-grid .box-container .box .title{
-   font-size: 2rem;
+   font-size: 1.9rem;
    color: var(--black);
    text-transform: capitalize;
 }

@@ -55,3 +55,17 @@
     </form>
 
 </section>
+<footer class="site-footer">
+   <p class="footer-text">© <span id="current-year"></span> <strong>CodeWise</strong><span style="color: blueviolet;">Academy</span> | All rights reserved.</p>
+</footer>
+
+<script>
+   (function(){
+      var y = new Date().getFullYear();
+      var el = document.getElementById('current-year');
+      if(el) el.textContent = y;
+   })();
+</script>
+
+</body>
+</html>
